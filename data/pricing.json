@@ -1,9 +1,9 @@
 {
-  "title" : "Pricing",
-  "description" : "Pricing subtitle",
+  "title" : "Tarife",
+  "description" : "Detalii Consultatii",
   "content" : [
     {
-      "title" : "Consultatii - Biorezonanta",
+      "title" : "Biorezonanta",
       "price" : "150 lei",
       "features" : [
         "Durata : 1 Ora 20 Minute",
