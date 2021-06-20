@@ -28,6 +28,20 @@
         "text" : "Contact",
         "href" : "/#contact"
       }
+    },
+    {
+      "title" : "Consultatii - Numerologie",
+      "price" : "150 lei",
+      "features" : [
+        "Durata : 1 Ora",
+        "Feature number 2",
+        "Feature 3",
+        "feature 4"
+      ],
+      "button" : {
+        "text" : "Contact",
+        "href" : "/#contact"
+      }
     }
   ]
 }
