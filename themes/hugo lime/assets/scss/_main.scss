@@ -99,8 +99,8 @@ h1,h2,h3,h4,h5,h6,strong{
   width: 80%;
   margin: 0px;
 
-  &.features:nth-child(even){
-    margin-left: 10%;
+  &.features:nth-child(odd){
+    margin-left: 30%;
   }
 
   .icon{
@@ -113,17 +113,17 @@ h1,h2,h3,h4,h5,h6,strong{
     color: #fff;
   }
 
-  &:nth-of-type(1) .icon{
+  &:nth-of-type(4) .icon{
     background: linear-gradient(to bottom right, #32d6fb 0%, #5558ed 100%);
     box-shadow: 0 8px 10px lighten(#32d6fb, 20%);
   }
 
-  &:nth-of-type(2) .icon{
+  &:nth-of-type(1) .icon{
     background: linear-gradient(to bottom right, #fc5f3c 0%, #ff55d3 100%);
     box-shadow: 0 8px 10px lighten(#fc5f3c, 20%);
     
   }
-  &:nth-of-type(4) .icon{
+  &:nth-of-type(2) .icon{
     background: linear-gradient(to bottom right, #1cf196 0%, #36a6bf 100%);
     box-shadow: 0 8px 10px lighten(#1cf196, 20%);
   }
@@ -139,7 +139,17 @@ h1,h2,h3,h4,h5,h6,strong{
   .features{
     width: 100%;
 
-    &.features:nth-child(even){
+    &.features:nth-child(odd){
+      margin: auto 0px;
+    }
+  }
+}
+
+@media(max-width: 600px){
+  .despremine{
+    width: 100%;
+
+    &.despremine:nth-child(odd){
       margin: auto 0px;
     }
   }

@@ -1,12 +1,12 @@
 {
-  "title" : "Tarife",
-  "description" : "Preturi pachete",
+  "title" : "Pricing",
+  "description" : "Pricing subtitle",
   "content" : [
     {
-      "title" : "Consultatii - Biorezonanta",
-      "price" : "150 RON",
+      "title" : "Starter",
+      "price" : "$30",
       "features" : [
-        "Durata : 1H20",
+        "No setup, monthly, or hidden fees",
         "Pay only for what you use",
         "Real-time fee reporting"
       ],
@@ -16,24 +16,10 @@
       }
     },
     {
-      "title" : "Consultatii - Numerologie",
-      "price" : "150 RON",
+      "title" : "Advance",
+      "price" : "$90",
       "features" : [
         "All features of Starter Pack",
-        "Feature number 2",
-        "Feature 3",
-        "feature 4"
-      ],
-      "button" : {
-        "text" : "Contact",
-        "href" : "/#contact"
-      }
-    },
-    {
-      "title" : "Consultatii - Reflexoterapie, Presopunctura",
-      "price" : "90 RON",
-      "features" : [
-        "Durata : 50 Minute",
         "Feature number 2",
         "Feature 3",
         "feature 4"

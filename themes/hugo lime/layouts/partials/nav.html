@@ -1,6 +1,6 @@
 {{ $header := .Site.Data.header }}
 {{- $logoSrc := printf "images/%s" $header.logo | absURL -}}
-    <nav class="navbar nav-transparent navbar-expand-lg navbar-light">
+    <nav class="navbar nav-transparent navbar-expand-lg">
       <!-- <div class="backdrop-blur"></div> -->
       <a class="navbar-brand" href="{{.Site.BaseURL}}"><img src="{{$logoSrc}}" height="40px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

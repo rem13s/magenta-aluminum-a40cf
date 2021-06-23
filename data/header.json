@@ -3,11 +3,11 @@
   "logo" : "logo.svg",
   "links" : [
     {
-      "title" : "Home",
+      "title" : "Acasa",
       "href" : ""
     },
     {
-      "title" : "Services",
+      "title" : "Servicii",
       "href" : "#features"
     },
     {

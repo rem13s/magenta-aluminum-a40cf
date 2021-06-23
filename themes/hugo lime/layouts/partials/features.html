@@ -1,20 +1,13 @@
 {{ $features := .Site.Data.features }}
 {{ $title := $features.title }}
 {{ $description := $features.description }}
+{{ $cover := .Site.Data.cover }}
+{{ $baseUrl := .Site.BaseURL }}
 <section id="features" class="bg-light py-5">
   <div class="container">
 
-    <div class="row">
-      <div class="col-lg-5 col-12">
-        <div class="d-flex h-100 align-items-center">
-          <div>
-              <h2 style="font-size:45px" class=" h1">{{ $title }}</h2>
-              <p class="text-muted">{{ $description }}</p>
-          </div>
-          
-        </div>
-      </div>
-      <div class="col-lg-7 col-12">
+    <div class="row">      
+      <div class="col-lg-7">
           
               {{ range $features.content }}
               <div class="row features bg-white shadow p-3 mb-3 rounded">
@@ -28,6 +21,9 @@
                 </div>
               {{end}}
            
+      </div>
+      <div class="col-lg-5" style="align-items: center;display: flex;justify-content: center;">        
+          <img class="" style="max-width: 130%;" src="{{ .Site.BaseURL }}/images/covers/4536306_2.svg">                  
       </div>
     </div>
   </div>

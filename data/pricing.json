@@ -6,7 +6,7 @@
       "title" : "Biorezonanta",
       "price" : "150 lei",
       "features" : [
-        "Durata : 1 Ora 20 Minute",
+        "1 Ora 20 Minute",
         "Pay only for what you use",
         "Real-time fee reporting"
       ],
@@ -19,7 +19,7 @@
       "title" : "Numerologie",
       "price" : "150 lei",
       "features" : [
-        "Durata : 1 Ora",
+        "1 Ora",
         "Feature number 2",
         "Feature 3",
         "feature 4"
@@ -30,10 +30,24 @@
       }
     },
     {
-      "title" : "Reflexoterapie / Presopunctura",
+      "title" : "Reflexoterapie",
       "price" : "90 lei",
       "features" : [
-        "Durata : 50 Minute",
+        "50 Minute",
+        "Feature number 2",
+        "Feature 3",
+        "feature 4"
+      ],
+      "button" : {
+        "text" : "Contact",
+        "href" : "/#contact"
+      }
+    },
+    {
+      "title" : "Presopunctura",
+      "price" : "90 lei",
+      "features" : [
+        "50 Minute",
         "Feature number 2",
         "Feature 3",
         "feature 4"
