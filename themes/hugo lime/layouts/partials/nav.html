@@ -1,31 +1,49 @@
 {{ $header := .Site.Data.header }}
-{{- $logoSrc := printf "images/%s" $header.logo | absURL -}}
     <nav class="navbar nav-transparent navbar-expand-lg">
       <!-- <div class="backdrop-blur"></div> -->
-      <a class="navbar-brand" href="{{.Site.BaseURL}}"><img src="{{$logoSrc}}" height="40px"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="container">
+        <div class="row align-items-center w-100">
+          <div class="col-auto">
+            <a class="navbar-brand navbar-brand--signature d-flex align-items-center mb-0" href="{{.Site.BaseURL}}">
+              <span class="brand-name">Elena DOBRICAN</span>
+              <span class="brand-sep" aria-hidden="true">|</span>
+              <span class="brand-tagline">
+                Terapeut, life coach,<br>
+                NLP master, numerolog, associative maps
+              </span>
+            </a>
+          </div>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          {{ range $header.links }}
+          <div class="col-auto ml-auto">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-              <li class="nav-item">
-                <a class="nav-link" href="{{.Site.BaseURL}}{{ .href | relURL }}">{{ .title }}</a>
-              </li>
-              
-            
-          {{ end }}
-        </ul>
-        <ul class="ml-auto navbar-nav">
-            {{ range $key, $value := .Site.Data.social }}
-            <li class="nav-item" style="font-size: 22px">
-              <a href="{{ $value }}" class="ml-3 text-white btn-{{ $key }}"><i class="fab fa-{{ $key }}"></i></a>
-            </li>
-            {{ end }}
-          
-        </ul>
+          <div class="col-12 col-lg">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-lg-auto">
+                {{ range $header.links }}
+                    <li class="nav-item">
+                      <a class="nav-link font-weight-bold" href="{{.Site.BaseURL}}{{ .href | relURL }}">{{ .title }}</a>
+                    </li>
+                {{ end }}
+              </ul>
+              <ul class="navbar-nav ml-lg-auto">
+                  <li class="nav-item d-flex align-items-center navbar-contact-icons">
+                    <a href="{{ with .Site.Data.social.facebook }}{{ . }}{{ else }}#{{ end }}" class="nav-link navbar-contact-icon p-0" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item ml-lg-4 navbar-contact">
+                    <div class="navbar-contact-text">
+                      <a class="navbar-phone" href="tel:+40766810765">+40 766 810 765</a>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
