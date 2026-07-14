@@ -1,6 +1,0 @@
-baseURL = ""
-languageCode = "en-us"
-title = "Hugo Lime"
-theme = "hugo lime"
-themesDir = "themes"
-publishDir = "public"

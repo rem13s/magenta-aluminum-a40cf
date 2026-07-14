@@ -1,0 +1,7 @@
+enable: true
+
+title: "Some of our awesome clients"
+items:
+  - "images/clients/producthunt.png"
+  - "images/clients/google.png"
+  - "images/clients/facebook.png"

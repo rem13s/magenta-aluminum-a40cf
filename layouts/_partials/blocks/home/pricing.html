@@ -1,0 +1,35 @@
+<section id="pricing" class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    {{ with .title }}
+      <h1 class="text-primary mb-8 text-center text-6xl font-bold">{{ . }}</h1>
+    {{ end }}
+    {{ with .text }}
+      <p class="mx-auto mb-16 text-center xl:max-w-[50%]">{{ . }}</p>
+    {{ end }}
+    {{ if .plans }}
+      <div class="grid gap-8 xl:grid-cols-4">
+        {{ range .plans }}
+          <div class="flex flex-col rounded-2xl bg-white p-8 shadow-lg">
+            {{ with .title }}<h2 class="text-primary mb-2 text-center text-2xl font-bold">{{ . }}</h2>{{ end }}
+            {{ with .price }}<p class="mb-6 text-center text-3xl font-semibold">{{ . }}</p>{{ end }}
+            {{ if .features }}
+              <ul class="mb-8 grow space-y-2 text-sm">
+                {{ range .features }}
+                  <li class="flex items-start gap-2">
+                    <span class="text-primary mt-1">✓</span>
+                    <span>{{ . }}</span>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
+            {{ with .button }}
+              <div class="text-center">
+                {{ partial "components/button/primary" (dict "label" .label "href" .link) }}
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>

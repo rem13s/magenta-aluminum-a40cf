@@ -1,0 +1,38 @@
+main:
+  - name: "Acasa"
+    url: "/#hero"
+    weight: 1
+
+  - name: "Servicii"
+    url: "/#services"
+    weight: 2
+
+  - name: "Tarife"
+    url: "/#pricing"
+    weight: 3
+
+  - name: "Contact"
+    url: "/#contact"
+    weight: 4
+
+buttons:
+  - name: "Contact"
+    url: "/#contact"
+    weight: 1
+
+footer:
+  - name: "Acasa"
+    url: "/#hero"
+    weight: 1
+
+  - name: "Servicii"
+    url: "/#services"
+    weight: 2
+
+  - name: "Tarife"
+    url: "/#pricing"
+    weight: 3
+
+  - name: "Contact"
+    url: "/#contact"
+    weight: 4

@@ -1,0 +1,30 @@
+title: "Green paper"
+description: "Va ajut sa gasiti o solutie pentru situatia care va afecteaza"
+images:
+  - "images/covers/freelancing.svg"
+
+logo: "images/logo.svg"
+
+colors:
+  primary: "#28a745"
+  secondary: "#6c757d"
+  tertiary: "#e8f5e9"
+
+favicons:
+  themeColor: "#FFFFFF"
+  backgroundColor: "#FFFFFF"
+  faviconColor: "#28a745"
+
+social:
+  facebook: "https://facebook.com/uicardio"
+  instagram: "https://instagram.com/uicardio"
+  twitter: "https://twitter.com/uicardio"
+
+location:
+  - "Strada Gheorghe Lazar, nr.9, Timisoara, 300081"
+
+contact:
+  - "contact@ekaterina.ro"
+  - "+40 766 810 765"
+
+copyright: "Copyright 2018"

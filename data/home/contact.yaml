@@ -1,0 +1,7 @@
+enable: true
+
+title: "Formular de Contact"
+formAction: "https://formspree.io/"
+address: "Strada Gheorghe Lazar, nr.9, Timisoara, 300081"
+email: "contact@ekaterina.ro"
+phone: "+40 766 810 765"

@@ -1,0 +1,15 @@
+theme: hugo-up-business
+languageCode: en-us
+
+build:
+  buildStats:
+    enable: true
+
+  cachebusters:
+    - source: "assets/notwatching/hugo_stats\\.json"
+      target: "css"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
