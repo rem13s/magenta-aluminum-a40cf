@@ -1,5 +1,6 @@
 {{ with site.Data.site.about }}
 {{ $bg := resources.Get .background }}
+{{ with $bg }}{{ $bg = .Resize "1400x" }}{{ end }}
 <section
   class="about section{{ with $bg }} about--has-bg{{ end }}"
   id="about"

@@ -1,5 +1,6 @@
 {{ with site.Data.site.hero }}
 {{ $bg := resources.Get .background }}
+{{ with $bg }}{{ $bg = .Resize "1400x" }}{{ end }}
 <section
   class="hero section{{ with $bg }} hero--has-bg{{ end }}"
   id="hero"
@@ -13,7 +14,8 @@
         {{ range .features }}
           <li class="hero__feature">
             {{ with resources.Get .image }}
-              <img class="hero__feature-img" src="{{ .RelPermalink }}" alt="" loading="lazy">
+              {{ $img := .Fit "220x220" }}
+              <img class="hero__feature-img" src="{{ $img.RelPermalink }}" alt="" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy">
             {{ end }}
             <span class="hero__feature-text">{{ .text }}</span>
           </li>
