@@ -4,23 +4,36 @@ Static site built with [Hugo](https://gohugo.io/) and the [Hugo Up Business](the
 
 ## Prerequisites
 
+No global installs are required. The dev scripts download portable Hugo and Node.js into `.tools/` on first run.
+
+Optional global installs:
+
 - **Hugo Extended v0.148+** (uses `css.TailwindCSS`)
 - **Node.js v22+** (required for Tailwind CSS processing)
 
-Portable tooling is available under `.tools/` for local development on Windows.
-
 ## Local development
 
-Install Node dependencies, then start the development server:
+Hugo's Tailwind CSS pipeline requires Node.js. Run the dev script from the project root (no global `npm` or `hugo` needed):
 
 ```powershell
-npm install
-.\.tools\hugo-148\hugo.exe server -D
+.\dev.ps1
+```
+
+Or:
+
+```powershell
+.\dev.cmd
 ```
 
 Open [http://localhost:1313/](http://localhost:1313/). The server watches `content/`, `data/`, `config/`, `layouts/`, and `themes/` for changes. Press `Ctrl+C` to stop.
 
-If Hugo and Node.js are installed globally:
+If Node.js is installed globally, you can also use:
+
+```powershell
+npm run dev
+```
+
+If Hugo and Node.js are both installed globally:
 
 ```powershell
 npm install
@@ -32,11 +45,22 @@ hugo server -D
 Generate the static site into `public/`:
 
 ```powershell
-npm install
-.\.tools\hugo-148\hugo.exe --gc --minify
+.\build.ps1
 ```
 
-Or, with global installs:
+Or:
+
+```powershell
+.\build.cmd
+```
+
+If Node.js is installed globally:
+
+```powershell
+npm run build
+```
+
+With global Hugo and Node.js:
 
 ```powershell
 npm install
