@@ -1,0 +1,19 @@
+title: "Vă voi ajuta să iesiți dintr-o **situatie neplacută** care vă provoacă neplaceri."
+background: "images/hero_ekaterina.png"
+features:
+  - image: "images/hero-feature-biorezonanta-clear.png"
+    text: "Biorezonanță"
+  - image: "images/hero-feature-numerologie1.png"
+    text: "Numerologie"
+  - image: "images/hero-feature-medicina-holistica3.png"
+    text: "Medicină holistică"
+
+motto:
+  - "Credință"
+  - "Nădejde"
+  - "Iubire"
+  - "Bucurie"
+  - "SERENDIPITATE!"
+
+bookingBar:
+  button: "Rezervă o ședință"

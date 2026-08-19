@@ -1,13 +1,13 @@
 main:
-  - name: "Acasa"
+  - name: "Home"
     url: "/#hero"
     weight: 1
 
-  - name: "Servicii"
-    url: "/#services"
+  - name: "Services"
+    url: "/#about"
     weight: 2
 
-  - name: "Tarife"
+  - name: "Pricing"
     url: "/#pricing"
     weight: 3
 
@@ -21,15 +21,15 @@ buttons:
     weight: 1
 
 footer:
-  - name: "Acasa"
+  - name: "Home"
     url: "/#hero"
     weight: 1
 
-  - name: "Servicii"
-    url: "/#services"
+  - name: "Services"
+    url: "/#about"
     weight: 2
 
-  - name: "Tarife"
+  - name: "Pricing"
     url: "/#pricing"
     weight: 3
 

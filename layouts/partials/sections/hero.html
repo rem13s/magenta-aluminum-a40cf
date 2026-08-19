@@ -1,0 +1,45 @@
+{{ with site.Data.site.hero }}
+{{ $bg := resources.Get .background }}
+<section
+  class="hero section{{ with $bg }} hero--has-bg{{ end }}"
+  id="hero"
+  {{ with $bg }}style="--hero-bg: url('{{ .RelPermalink }}')"{{ end }}
+>
+  <div class="container hero__grid">
+    <div class="hero__spacer" aria-hidden="true"></div>
+    <div class="hero__copy">
+      <h1 class="hero__title">{{ partial "highlight.html" .title }}</h1>
+      <ul class="hero__features">
+        {{ range .features }}
+          <li class="hero__feature">
+            {{ with resources.Get .image }}
+              <img class="hero__feature-img" src="{{ .RelPermalink }}" alt="" loading="lazy">
+            {{ end }}
+            <span class="hero__feature-text">{{ .text }}</span>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  <div class="container hero__bar">
+    <div class="booking-bar">
+      {{ with .motto }}
+        <p class="hero__motto" aria-label="{{ delimit . " " }}">
+          {{ range $i, $word := . }}
+            {{ if $i }}<span class="hero__motto-sep" aria-hidden="true">.</span>{{ end }}
+            {{ if eq $word "SERENDIPITATE!" }}
+              <strong class="hero__motto-highlight">{{ $word }}</strong>
+            {{ else }}
+              <span>{{ $word }}</span>
+            {{ end }}
+          {{ end }}
+        </p>
+      {{ end }}
+      <div class="booking-bar__action">
+        {{ partial "btn-book.html" .bookingBar.button }}
+      </div>
+    </div>
+  </div>
+  <div class="cloud cloud--bottom"></div>
+</section>
+{{ end }}

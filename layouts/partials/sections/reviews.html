@@ -1,0 +1,20 @@
+{{ with site.Data.site.reviews }}
+<section class="reviews section section--light" id="reviews">
+  <div class="container">
+    <h2 class="section-title section-title--center">{{ partial "highlight.html" .title }}</h2>
+    <div class="reviews__stage">
+      <div class="reviews__phone">
+        <div class="reviews__phone-screen">
+          {{ with index .reviews 0 }}
+            <p class="reviews__quote">"{{ .text }}"</p>
+            <p class="reviews__author">— {{ .author }}</p>
+          {{ end }}
+        </div>
+      </div>
+      <div class="reviews__bubble reviews__bubble--1"></div>
+      <div class="reviews__bubble reviews__bubble--2"></div>
+      <div class="reviews__prop reviews__prop--pen" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+{{ end }}

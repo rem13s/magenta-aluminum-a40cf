@@ -1,0 +1,11 @@
+title: "My client case studies"
+cases:
+  - image: "images/case-sleep.jpg"
+    title: "Restoring sleep"
+    text: "The client complained of insomnia and constant fatigue. In 4 sessions we identified triggers and introduced new evening routines."
+    button: "Learn more"
+
+  - image: "images/case-confidence.jpg"
+    title: "Building confidence"
+    text: "The client struggled with communication at work. We worked through fear of judgment and prepared scripts for difficult conversations."
+    button: "Learn more"

@@ -1,0 +1,18 @@
+{{ with site.Data.site.results }}
+<section class="results section section--mist" id="results">
+  <div class="container">
+    <h2 class="section-title">{{ partial "highlight.html" .title }}</h2>
+    <div class="results__grid">
+      <div class="results__panel">
+        <div class="results__prop results__prop--notebook" aria-hidden="true"></div>
+        <ul class="results__list">
+          {{ range .items }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      <div class="results__media">
+        {{ partial "photo.html" (dict "src" .image "class" "results__photo" "alt" "Ekaterina Mihailova" "label" "Results") }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

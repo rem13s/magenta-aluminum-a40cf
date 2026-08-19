@@ -1,97 +1,45 @@
-# Green paper
+# Ekaterina Mihailova
 
-Static site built with [Hugo](https://gohugo.io/) and the [Hugo Up Business](themes/hugo-up-business/) theme (Tailwind CSS v4). Site content is configured via YAML files in `data/home/` and `config/_default/`.
-
-## Prerequisites
-
-No global installs are required. The dev scripts download portable Hugo and Node.js into `.tools/` on first run.
-
-Optional global installs:
-
-- **Hugo Extended v0.148+** (uses `css.TailwindCSS`)
-- **Node.js v22+** (required for Tailwind CSS processing)
+Single-page [Hugo](https://gohugo.io/) site for consultations and booking. The layout follows a landing-page design: hero, booking bar, about, process, pricing, results, case studies, reviews, education, and contact.
 
 ## Local development
 
-Hugo's Tailwind CSS pipeline requires Node.js. Run the dev script from the project root (no global `npm` or `hugo` needed):
+Global `npm` and `hugo` are not required:
 
 ```powershell
 .\dev.ps1
 ```
 
-Or:
-
-```powershell
-.\dev.cmd
-```
-
-Open [http://localhost:1313/](http://localhost:1313/). The server watches `content/`, `data/`, `config/`, `layouts/`, and `themes/` for changes. Press `Ctrl+C` to stop.
-
-If Node.js is installed globally, you can also use:
-
-```powershell
-npm run dev
-```
-
-If Hugo and Node.js are both installed globally:
-
-```powershell
-npm install
-hugo server -D
-```
+Open [http://localhost:1313/](http://localhost:1313/).
 
 ## Build
-
-Generate the static site into `public/`:
 
 ```powershell
 .\build.ps1
 ```
 
-Or:
+Output goes to `public/`, matching `netlify.toml`.
 
-```powershell
-.\build.cmd
-```
-
-If Node.js is installed globally:
-
-```powershell
-npm run build
-```
-
-With global Hugo and Node.js:
-
-```powershell
-npm install
-hugo --gc --minify
-```
-
-The output is written to `public/`, matching the Netlify build in `netlify.toml`.
-
-## Installing Hugo locally
-
-If `.tools/hugo-148/` is not present, download Hugo Extended v0.148.2 for Windows:
-
-```powershell
-$toolsDir = ".tools\hugo-148"
-New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
-$zip = ".tools\hugo-148.zip"
-Invoke-WebRequest -Uri "https://github.com/gohugoio/hugo/releases/download/v0.148.2/hugo_extended_0.148.2_windows-amd64.zip" -OutFile $zip
-Expand-Archive -Path $zip -DestinationPath $toolsDir -Force
-```
-
-Alternatively, install Hugo Extended from the [official installation guide](https://gohugo.io/installation/windows/).
-
-## Content structure
+## Content
 
 | Path | Purpose |
 |------|---------|
-| `config/_default/` | Site title, menus, params |
-| `data/home/` | Homepage sections (hero, services, pricing, team, brands, contact) |
-| `layouts/` | Custom section overrides |
-| `assets/images/` | Site images and illustrations |
+| `data/site/` | Text for all sections (hero, about, pricing, …) |
+| `config/_default/params.yaml` | Site colors and settings |
+| `assets/images/` | Photos and illustrations |
+| `layouts/partials/sections/` | Page section HTML |
+| `assets/css/site.css` | Layout styles |
 
-## Theme
+### Replacing photos
 
-This project uses [Hugo Up Business](https://github.com/writeonlycode/hugo-up-business) — a modern landing page theme built with Tailwind CSS, compatible with Hugo v0.148+.
+Place files in `assets/images/` using the names from `data/site/*.yaml`:
+
+- `hero-ekaterina.jpg`, `intro-ekaterina.jpg`, `about-ekaterina.jpg`, …
+- `cert-1.jpg`, `cert-2.jpg` — certificates
+- `case-sleep.jpg`, `case-confidence.jpg` — case studies
+
+Placeholder images are used for now.
+
+## Hugo
+
+Portable Hugo 0.148.2 lives in `.tools/hugo-148/`. The `dev.ps1` and `build.ps1` scripts download it on first run.

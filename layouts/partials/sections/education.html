@@ -1,0 +1,15 @@
+{{ with site.Data.site.education }}
+<section class="education section" id="education">
+  <div class="container">
+    <h2 class="section-title section-title--center">{{ .title }}</h2>
+    <div class="education__layout">
+      <div class="education__prop education__prop--scroll" aria-hidden="true"></div>
+      <div class="education__certs">
+        {{ range .certificates }}
+          {{ partial "photo.html" (dict "src" .image "class" "education__cert" "alt" .alt "label" .alt) }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

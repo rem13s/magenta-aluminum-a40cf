@@ -1,13 +1,9 @@
-theme: hugo-up-business
-languageCode: en-us
+languageCode: en
+defaultContentLanguage: en
 
-build:
-  buildStats:
-    enable: true
-
-  cachebusters:
-    - source: "assets/notwatching/hugo_stats\\.json"
-      target: "css"
+disableKinds:
+  - taxonomy
+  - term
 
 markup:
   goldmark:
