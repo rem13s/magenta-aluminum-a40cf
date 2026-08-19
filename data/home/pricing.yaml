@@ -1,0 +1,47 @@
+enable: true
+
+title: "Tarife"
+text: "Detalii Consultatii"
+plans:
+  - title: "Biorezonanta"
+    price: "150 lei"
+    features:
+      - "1 Ora 20 Minute"
+      - "Pay only for what you use"
+      - "Real-time fee reporting"
+    button:
+      label: "Contact"
+      link: "/#contact"
+
+  - title: "Numerologie"
+    price: "150 lei"
+    features:
+      - "1 Ora"
+      - "Feature number 2"
+      - "Feature 3"
+      - "feature 4"
+    button:
+      label: "Contact"
+      link: "/#contact"
+
+  - title: "Reflexoterapie"
+    price: "90 lei"
+    features:
+      - "50 Minute"
+      - "Feature number 2"
+      - "Feature 3"
+      - "feature 4"
+    button:
+      label: "Contact"
+      link: "/#contact"
+
+  - title: "Presopunctura"
+    price: "90 lei"
+    features:
+      - "50 Minute"
+      - "Feature number 2"
+      - "Feature 3"
+      - "feature 4"
+    button:
+      label: "Contact"
+      link: "/#contact"

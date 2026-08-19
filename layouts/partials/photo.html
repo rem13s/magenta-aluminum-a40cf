@@ -1,0 +1,10 @@
+{{ $img := . }}
+{{ $class := .class | default "" }}
+{{ $alt := .alt | default "" }}
+{{ with resources.Get $img.src }}
+  <img class="photo {{ $class }}" src="{{ .RelPermalink }}" alt="{{ $alt }}" loading="lazy">
+{{ else }}
+  <div class="photo photo--placeholder {{ $class }}" role="img" aria-label="{{ $alt }}">
+    <span>{{ $img.label | default "Photo" }}</span>
+  </div>
+{{ end }}

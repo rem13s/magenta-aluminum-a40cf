@@ -1,0 +1,16 @@
+title: "About me:"
+background: "images/section-about.png"
+portrait: "images/about-denis.jpg"
+
+columns:
+  - icon: "doc"
+    text: "Psychologist, Life Path Coach, NLP Master, and certified practitioner of modern coaching methods."
+  - icon: "brain"
+    text: "I create a unique combination of psychological tools for each client."
+
+quote: "All the answers are within ourselves — I simply help you see them."
+
+download:
+  button: "Download"
+  text: "Download the guide “How to understand your true desires and bring them to life”"
+  url: "#contact"

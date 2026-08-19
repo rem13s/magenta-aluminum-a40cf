@@ -1,0 +1,13 @@
+enable: true
+
+title: "Servicii"
+text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis mollis nisi, a tempor mi fermentum eget. Duis sed pulvinar justo."
+cards:
+  - title: "Probleme de sanatate ?"
+    text: "Aveti probleme de sanatate, cu greutatea, cu somnul, cu oboseala, lipsa de vitalitate si energie, iritatie, nervozitate ?"
+
+  - title: "Stil de viata sanatos"
+    text: "Vreti sa incepeti un nou stil de viata ?"
+
+  - title: "Dependente ?"
+    text: "Aveti anumite dependente (fumat, baut), nu puteti comunica, socializa ? Aveti stima de sine scazuta,"

@@ -1,0 +1,28 @@
+enable: true
+
+title: "Team"
+text: "Little team description here"
+members:
+  - name: "Sarita"
+    description: "CEO"
+    avatar: "images/team/sarita.jpeg"
+    social:
+      facebook: "https://facebook.com/damn"
+      instagram: "https://instagram.com/damn"
+      linkedin: "https://linkedin.com/add/damn"
+
+  - name: "Veronica"
+    description: "Graphics Designer"
+    avatar: "images/team/veronica.jpeg"
+    social:
+      twitter: "https://twitter.com/damn"
+      instagram: "https://instagram.com/damn"
+      dribbble: "https://dribbble.com/add/damn"
+
+  - name: "John"
+    description: "Graphics Designer"
+    avatar: "images/team/john.jpeg"
+    social:
+      linkedin: "https://linkedin.com/damn"
+      instagram: "https://instagram.com/damn"
+      medium: "https://medium.com/add/damn"

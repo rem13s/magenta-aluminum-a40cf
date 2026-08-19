@@ -1,0 +1,46 @@
+title: "Tarife"
+text: "Detalii Consultatii"
+plans:
+  - title: "1 Sedință Biorezonanta"
+    price: "300"
+    currency: "RON"
+    features:
+      - "Durata:1 Oră"
+      - "Evaluare inițială"
+      - "Analiza rezultatelor"
+      - "Terapia (dacă este necesară)"
+    button: "Contact"
+    featured: false
+
+  - title: "1 Sedință Numerologie"
+    price: "250"
+    currency: "RON"
+    features:
+      - "Analiza datei de naștere"
+      - "Studiul numelui"
+      - "Matricea (Pătratul lui Pitagora)"
+      - "Domenii potrivite de activitate"
+    button: "Contact"
+    featured: false
+
+  - title: "1 Sedință Reflexoterapie"
+    price: "90"
+    currency: "RON"
+    features:
+      - "50 Minute"
+      - "Feature number 2"
+      - "Feature 3"
+      - "feature 4"
+    button: "Contact"
+    featured: false
+
+  - title: "Presopunctura"
+    price: "90"
+    currency: "lei"
+    features:
+      - "50 Minute"
+      - "Feature number 2"
+      - "Feature 3"
+      - "feature 4"
+    button: "Contact"
+    featured: false

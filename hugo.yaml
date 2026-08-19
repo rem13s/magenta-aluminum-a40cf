@@ -1,0 +1,11 @@
+languageCode: en
+defaultContentLanguage: en
+
+disableKinds:
+  - taxonomy
+  - term
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

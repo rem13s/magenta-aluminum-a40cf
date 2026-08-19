@@ -1,0 +1,18 @@
+{{ with site.Data.site.process }}
+<section class="process section section--light" id="process">
+  <div class="container">
+    <h2 class="section-title section-title--center">{{ partial "highlight.html" .title }}</h2>
+    <div class="process__wheel">
+      <div class="process__center">
+        {{ partial "photo.html" (dict "src" .image "class" "process__photo" "alt" "Ekaterina Mihailova" "label" "Process") }}
+      </div>
+      {{ range $i, $step := .steps }}
+        <div class="process__step process__step--{{ add $i 1 }}">
+          <span class="process__number">{{ $step.number }}</span>
+          <p class="process__text">{{ $step.text }}</p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

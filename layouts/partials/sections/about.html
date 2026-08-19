@@ -1,0 +1,39 @@
+{{ with site.Data.site.about }}
+{{ $bg := resources.Get .background }}
+<section
+  class="about section{{ with $bg }} about--has-bg{{ end }}"
+  id="about"
+  {{ with $bg }}style="--about-bg: url('{{ .RelPermalink }}')"{{ end }}
+>
+  <div class="about__blur" aria-hidden="true"></div>
+  <div class="container about__layout">
+    <div class="about__main">
+      <h2 class="about__title">{{ partial "highlight.html" .title }}</h2>
+
+      <div class="about__panel">
+        {{ range .columns }}
+          <div class="about__col">
+            <div class="about__icon about__icon--{{ .icon }}" aria-hidden="true"></div>
+            <p class="about__col-text">{{ .text }}</p>
+          </div>
+        {{ end }}
+      </div>
+
+      {{ with .download }}
+        <div class="about__cta">
+          <a class="btn btn--gold about__cta-btn" href="{{ .url }}">{{ .button }}</a>
+          <p class="about__cta-text">{{ .text }}</p>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="about__portrait">
+      {{ partial "photo.html" (dict "src" .portrait "class" "about__photo" "alt" "Ekaterina Mihailova" "label" "Ekaterina Mihailova") }}
+      {{ with .quote }}
+        <blockquote class="about__quote">“{{ . }}”</blockquote>
+      {{ end }}
+    </div>
+  </div>
+  <div class="cloud cloud--bottom"></div>
+</section>
+{{ end }}

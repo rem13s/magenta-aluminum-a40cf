@@ -1,54 +1,45 @@
-# Hugo Lime
+# Ekaterina Mihailova
 
-Static site built with [Hugo](https://gohugo.io/) and the [Hugo Lime](themes/hugo%20lime/) theme. Site content is configured via JSON files in `data/`.
-
-## Prerequisites
-
-- **Hugo Extended** (required for SCSS compilation)
-- **Hugo v0.127.x** — this theme uses `resources.ToCSS`, which was removed in newer Hugo versions
+Single-page [Hugo](https://gohugo.io/) site for consultations and booking. The layout follows a landing-page design: hero, booking bar, about, process, pricing, results, case studies, reviews, education, and contact.
 
 ## Local development
 
-From the project root, start the development server:
+Global `npm` and `hugo` are not required:
 
 ```powershell
-.\.tools\hugo-127\hugo.exe server -D
+.\dev.ps1
 ```
 
-Open [http://localhost:1313/](http://localhost:1313/). The server watches `content/`, `data/`, and `themes/` for changes. Press `Ctrl+C` to stop.
-
-If Hugo is installed globally and on your `PATH`:
-
-```powershell
-hugo server -D
-```
+Open [http://localhost:1313/](http://localhost:1313/).
 
 ## Build
 
-Generate the static site into `public/`:
-
 ```powershell
-.\.tools\hugo-127\hugo.exe
+.\build.ps1
 ```
 
-Or, with a global Hugo install:
+Output goes to `public/`, matching `netlify.toml`.
 
-```powershell
-hugo
-```
+## Content
 
-The output is written to `public/`, matching the Netlify build in `netlify.toml`.
+| Path | Purpose |
+|------|---------|
+| `data/site/` | Text for all sections (hero, about, pricing, …) |
+| `config/_default/params.yaml` | Site colors and settings |
+| `assets/images/` | Photos and illustrations |
+| `layouts/partials/sections/` | Page section HTML |
+| `assets/css/site.css` | Layout styles |
 
-## Installing Hugo locally
+### Replacing photos
 
-If `.tools/hugo-127/` is not present, download Hugo Extended v0.127.0 for Windows:
+Place files in `assets/images/` using the names from `data/site/*.yaml`:
 
-```powershell
-$toolsDir = ".tools\hugo-127"
-New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
-$zip = ".tools\hugo-127.zip"
-Invoke-WebRequest -Uri "https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip" -OutFile $zip
-Expand-Archive -Path $zip -DestinationPath $toolsDir -Force
-```
+- `hero-ekaterina.jpg`, `intro-ekaterina.jpg`, `about-ekaterina.jpg`, …
+- `cert-1.jpg`, `cert-2.jpg` — certificates
+- `case-sleep.jpg`, `case-confidence.jpg` — case studies
 
-Alternatively, install Hugo Extended from the [official installation guide](https://gohugo.io/installation/windows/).
+Placeholder images are used for now.
+
+## Hugo
+
+Portable Hugo 0.148.2 lives in `.tools/hugo-148/`. The `dev.ps1` and `build.ps1` scripts download it on first run.

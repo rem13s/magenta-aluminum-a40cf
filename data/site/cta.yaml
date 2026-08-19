@@ -1,0 +1,13 @@
+quote: "Every person is capable of finding a way out of a difficult situation — sometimes you just need someone to help you see the path."
+image: "images/cta-ekaterina.jpg"
+button: "Book a session"
+
+contact:
+  title: "Get in touch"
+  email: "hello@example.com"
+  formAction: "https://formspree.io/f/example"
+  form:
+    namePlaceholder: "Your name"
+    emailPlaceholder: "Email"
+    messagePlaceholder: "Message"
+    submit: "Send"

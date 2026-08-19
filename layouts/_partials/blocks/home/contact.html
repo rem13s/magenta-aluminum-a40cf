@@ -1,0 +1,38 @@
+<section id="contact" class="bg-tertiary/25 py-16">
+  <div class="container mx-auto px-4">
+    {{ with .title }}
+      <h1 class="text-primary mb-12 text-center text-6xl font-bold">{{ . }}</h1>
+    {{ end }}
+    <div class="mx-auto grid max-w-6xl gap-12 xl:grid-cols-2">
+      <div class="space-y-6 rounded-2xl bg-white p-8 shadow-lg">
+        <div>
+          <h2 class="text-primary mb-2 text-lg font-bold">Adresa cabinet</h2>
+          <p>{{ .address }}</p>
+        </div>
+        <div>
+          <h2 class="text-primary mb-2 text-lg font-bold">E-mail de contact</h2>
+          <p>{{ .email }}</p>
+        </div>
+        <div>
+          <h2 class="text-primary mb-2 text-lg font-bold">Telefon</h2>
+          <p>{{ .phone }}</p>
+        </div>
+      </div>
+      <form action="{{ .formAction }}" method="POST" class="rounded-2xl bg-white p-8 shadow-lg">
+        <div class="mb-4">
+          <label class="text-primary mb-2 block font-medium" for="contact-name">Nume</label>
+          <input class="w-full rounded border border-gray-300 px-4 py-2" id="contact-name" name="Name" placeholder="Nume" type="text" />
+        </div>
+        <div class="mb-4">
+          <label class="text-primary mb-2 block font-medium" for="contact-email">Adresa de E-mail</label>
+          <input class="w-full rounded border border-gray-300 px-4 py-2" id="contact-email" name="Email" placeholder="E-mail" type="email" />
+        </div>
+        <div class="mb-6">
+          <label class="text-primary mb-2 block font-medium" for="contact-message">Mesaj</label>
+          <textarea class="w-full rounded border border-gray-300 px-4 py-2" id="contact-message" name="Message" placeholder="Continutul Mesajului" rows="5"></textarea>
+        </div>
+        <button class="bg-primary hover:bg-primary/90 rounded px-8 py-2 text-white duration-500" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>

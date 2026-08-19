@@ -1,0 +1,19 @@
+{{ with site.Data.site.cases }}
+<section class="cases section" id="cases">
+  <div class="container">
+    <h2 class="section-title section-title--center">{{ .title }}</h2>
+    <div class="cases__grid">
+      {{ range .cases }}
+        <article class="case-card">
+          {{ partial "photo.html" (dict "src" .image "class" "case-card__image" "alt" .title "label" .title) }}
+          <div class="case-card__body">
+            <h3 class="case-card__title">{{ .title }}</h3>
+            <p class="case-card__text">{{ .text }}</p>
+            <a class="btn btn--gold btn--sm" href="#contact">{{ .button }}</a>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

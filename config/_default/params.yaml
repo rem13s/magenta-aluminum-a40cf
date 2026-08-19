@@ -1,0 +1,11 @@
+description: "I will help you find a way out of the situation that concerns you"
+bookingUrl: "#contact"
+
+colors:
+  blue: "#2f5f9e"
+  blueLight: "#4a7fc1"
+  gold: "#e8a54b"
+  goldDark: "#d4922f"
+  text: "#333333"
+  muted: "#666666"
+  bg: "#f5f7fa"

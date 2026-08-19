@@ -1,0 +1,26 @@
+{{ with site.Data.site.cta }}
+<section class="cta section" id="contact">
+  <div class="cta__sky"></div>
+  <div class="container cta__layout">
+    <div class="cta__quote">
+      <blockquote>"{{ .quote }}"</blockquote>
+    </div>
+    <div class="cta__media">
+      {{ partial "photo.html" (dict "src" .image "class" "cta__photo" "alt" "Ekaterina Mihailova" "label" "Book a session") }}
+    </div>
+    <div class="cta__action">
+      {{ partial "btn-book.html" .button }}
+      <div class="cta__contact">
+        <h3>{{ .contact.title }}</h3>
+        <p><a href="mailto:{{ .contact.email }}">{{ .contact.email }}</a></p>
+        <form class="cta__form" action="{{ .contact.formAction }}" method="POST">
+          <input type="text" name="name" placeholder="{{ .contact.form.namePlaceholder }}" required>
+          <input type="email" name="email" placeholder="{{ .contact.form.emailPlaceholder }}" required>
+          <textarea name="message" rows="4" placeholder="{{ .contact.form.messagePlaceholder }}" required></textarea>
+          <button class="btn btn--gold" type="submit">{{ .contact.form.submit }}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

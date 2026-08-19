@@ -2,3 +2,18 @@
 public/
 resources/_gen/
 .hugo_build.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Tooling archives and portable runtimes
+.tools/*.zip
+.tools/hugo-127/
+.tools/hugo-148/
+.tools/node/
+.tools/node-v*/
