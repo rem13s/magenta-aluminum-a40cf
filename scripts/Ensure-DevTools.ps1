@@ -63,7 +63,11 @@ Set-Location $Root
 
 if (-not (Test-Path (Join-Path $Root "node_modules"))) {
     Write-Host "Installing npm dependencies..."
-    & (Join-Path $nodeDir "npm.cmd") install
+    $npmCmd = Join-Path $nodeDir "npm.cmd"
+    $npm = Start-Process -FilePath $npmCmd -ArgumentList "install" -WorkingDirectory $Root -Wait -NoNewWindow -PassThru
+    if ($npm.ExitCode -ne 0) {
+        throw "npm install failed with exit code $($npm.ExitCode)"
+    }
 }
 
 return @{
