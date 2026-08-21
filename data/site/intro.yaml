@@ -1,8 +1,11 @@
-title: "Pay attention"
-image: "images/intro-ekaterina.jpg"
-thoughts:
-  - "I don't know where to start making changes"
-  - "I feel anxiety and fatigue every day"
-  - "I want to understand myself and my reactions"
-  - "I need support without judgment"
-  - "It's important to find a solution that fits me"
+background: "images/section2.png"
+
+left:
+  - "Nu știu de unde să încep să fac schimbări"
+  - "Simt anxietate și oboseală în fiecare zi"
+  - "Vreau să înțeleg pe mine și reacțiile mele"
+
+right:
+  - "Am nevoie de sprijin fără judecată"
+  - "Este important să găsesc o soluție care mă potrivește"
+  - "Ceva se simte blocat — și vreau să merg mai departe"

@@ -1,16 +1,15 @@
 title: "About me:"
-background: "images/section-about.png"
-portrait: "images/about-denis.jpg"
+background: "images/section-about3.png"
 
 columns:
   - icon: "doc"
-    text: "Psychologist, Life Path Coach, NLP Master, and certified practitioner of modern coaching methods."
+    text: "Terapeut si numerolog certificat, coach de viata."
   - icon: "brain"
-    text: "I create a unique combination of psychological tools for each client."
+    text: "Cred că toate răspunsurile se află în noi — doar că trebuie să le vedem."
 
-quote: "All the answers are within ourselves — I simply help you see them."
+quote: "Toate răspunsurile se află în noi — doar trebuie să le vedem."
 
 download:
-  button: "Download"
-  text: "Download the guide “How to understand your true desires and bring them to life”"
+  button: "Descarcă ghidul"
+  text: "Descarcă ghidul “Cum să înțelegi adevărata ta dorință și să o aduci la viață”"
   url: "#contact"
