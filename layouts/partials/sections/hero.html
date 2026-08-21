@@ -1,6 +1,6 @@
 {{ with site.Data.site.hero }}
 {{ $bg := resources.Get .background }}
-{{ with $bg }}{{ $bg = .Resize "1400x" }}{{ end }}
+{{ with $bg }}{{ $bg = .Resize "2400x" }}{{ end }}
 <section
   class="hero section{{ with $bg }} hero--has-bg{{ end }}"
   id="hero"
@@ -42,6 +42,5 @@
       </div>
     </div>
   </div>
-  <div class="cloud cloud--bottom"></div>
 </section>
 {{ end }}

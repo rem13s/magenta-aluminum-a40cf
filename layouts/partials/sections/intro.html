@@ -1,16 +1,27 @@
 {{ with site.Data.site.intro }}
-<section class="intro section section--mist" id="intro">
-  <div class="cloud cloud--top"></div>
-  <div class="container intro__layout">
-    <div class="intro__media">
-      {{ partial "photo.html" (dict "src" .image "class" "intro__photo" "alt" "Ekaterina Mihailova" "label" "Consultation") }}
-    </div>
-    <div class="intro__thoughts">
-      {{ range .thoughts }}
-        <div class="intro__thought">{{ . }}</div>
-      {{ end }}
-    </div>
+{{ $bg := resources.Get .background }}
+{{ with $bg }}{{ $bg = .Resize "1600x" }}{{ end }}
+<section
+  class="intro section{{ with $bg }} intro--has-bg{{ end }}"
+  id="intro"
+  {{ with $bg }}style="--intro-bg: url('{{ .RelPermalink }}')"{{ end }}
+>
+  <div class="intro__stage">
+    {{ range $i, $text := .left }}
+      <div class="intro__item intro__item--left intro__item--{{ add $i 1 }}">
+        <p class="intro__text">{{ $text }}</p>
+        <span class="intro__mark" aria-hidden="true">+</span>
+      </div>
+    {{ end }}
+
+    <div class="intro__portrait" role="img" aria-label="Ekaterina Mihailova"></div>
+
+    {{ range $i, $text := .right }}
+      <div class="intro__item intro__item--right intro__item--{{ add $i 4 }}">
+        <span class="intro__mark" aria-hidden="true">+</span>
+        <p class="intro__text">{{ $text }}</p>
+      </div>
+    {{ end }}
   </div>
-  <div class="intro__prop intro__prop--folder" aria-hidden="true"></div>
 </section>
 {{ end }}
